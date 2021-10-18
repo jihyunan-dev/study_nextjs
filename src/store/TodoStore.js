@@ -14,10 +14,11 @@ class TodoStore {
   }
 
   remove(todoId) {
-    this.todoList.filter((item) => item.id !== todoId);
+    const idx = this.todoList.findIndex((item) => item.id === todoId);
+    this.todoList.splice(idx, 1);
   }
 
-  modify(todoObj) {
+  update(todoObj) {
     this.todoList.map((item) => (item.id === todoObj.id ? todoObj : item));
   }
 }
