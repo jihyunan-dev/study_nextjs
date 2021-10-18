@@ -1,7 +1,9 @@
 import { makeAutoObservable } from "mobx";
 
 class TodoStore {
-  todoList = [{ id: 1234, title: "잠자기" }];
+  todoList = [
+    { id: 1234, title: "잠자기", description: "내일을 위해 푹 자자!" },
+  ];
 
   constructor() {
     makeAutoObservable(this);
